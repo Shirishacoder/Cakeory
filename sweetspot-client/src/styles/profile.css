@@ -1,0 +1,129 @@
+/* =========================
+   PROFILE PAGE – SWEETSPOT
+========================= */
+
+.profile-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Title */
+.profile-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: rgba(224, 99, 99, 0.9);
+}
+
+/* Subtitle */
+.profile-subtitle {
+  margin: 26px 0 14px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(219, 117, 128, 0.95);
+}
+
+/* Fields */
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.profile-field label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: rgba(120, 120, 120, 0.9);
+}
+
+.profile-field input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(219, 117, 128, 0.4);
+  font-size: 15px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Input Focus */
+.profile-field input:focus {
+  border-color: rgba(224, 99, 99, 0.9);
+  box-shadow: 0 0 0 3px rgba(224, 99, 99, 0.2);
+}
+
+/* Disabled Inputs */
+.profile-field input:disabled {
+  background: rgba(245, 245, 245, 0.95);
+  cursor: not-allowed;
+  color: rgba(120, 120, 120, 0.8);
+}
+
+/* Grid layout */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* Save Button */
+.profile-save-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    rgba(224, 99, 99, 0.9),
+    rgba(224, 99, 150, 0.9)
+  );
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button Hover */
+.profile-save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(224, 99, 99, 0.35);
+}
+
+/* Disabled Button */
+.profile-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .profile-container {
+    padding: 24px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
